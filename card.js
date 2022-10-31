@@ -1,5 +1,5 @@
 
-let tab = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+let cards = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
 function spliceTab(array) {
     let test = array.splice(0, 4);
@@ -13,13 +13,13 @@ function getMultipleRandom(arr, num) {
 }
 
 
-let randomTab = getMultipleRandom(tab, tab.length);
-let Pierre = spliceTab(randomTab);
-let Jack = spliceTab(randomTab);
-let Paul = spliceTab(randomTab)
+let randomCards = getMultipleRandom(cards, cards.length);
+let Pierre = spliceTab(randomCards);
+let Jack = spliceTab(randomCards);
+let Paul = spliceTab(randomCards);
 
-console.log(Pierre);
-console.log(Jack);
-console.log(Paul);
+console.log(`Pierre possède la combinaison suivante : ${Pierre}`);
+console.log(`Jack possède la combinaison suivante : ${Jack}`);
+console.log(`Paul possède la combinaison suivante : ${Paul}`);
 
 
