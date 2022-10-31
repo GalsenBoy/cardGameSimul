@@ -14,12 +14,22 @@ function getMultipleRandom(arr, num) {
 
 
 let randomCards = getMultipleRandom(cards, cards.length);
-let Pierre = spliceTab(randomCards);
-let Jack = spliceTab(randomCards);
-let Paul = spliceTab(randomCards);
+let franck = spliceTab(randomCards);
+let tom = spliceTab(randomCards);
+let sam = spliceTab(randomCards);
 
-console.log(`Pierre possède la combinaison suivante : ${Pierre}`);
-console.log(`Jack possède la combinaison suivante : ${Jack}`);
-console.log(`Paul possède la combinaison suivante : ${Paul}`);
+//Range les éléments du plus petit au plus grand
+franck.sort(function (a, b) {
+    return a - b;
+});
+tom.sort(function (a, b) {
+    return a - b;
+});
+sam.sort(function (a, b) {
+    return a - b;
+});
 
+console.log(`Franck possède la combinaison suivante : ${franck}`);
+console.log(`Tom possède la combinaison suivante : ${tom}`);
+console.log(`Sam possède la combinaison suivante : ${sam}`);
 
