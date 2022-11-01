@@ -10,7 +10,10 @@ function getMultipleRandom(array, num) {
     return randomTab.slice(0, num);
 }
 
-function firstTurn(array) {
+
+//Code super méga hyper déguelasse xD mais le clean code va venir lol factoriser et tout ça
+
+function turn(array) {
     if (array[1] == 0) {
         console.log(`${array[0]} possède la combinaison suivante : ${array[1]}, ${array[2]},${array[3]},${array[4]}`)
         console.log(` ${array[0]} va jouer en premier`);
@@ -18,6 +21,14 @@ function firstTurn(array) {
         array.splice(1, 1);
         console.log(` La combinaison de ${array[0]} est maintenant la suivante : ${array[1]}, ${array[2]},${array[3]}`)
     }
+    setTimeout(() => {
+        if (array[1] != 0) {
+            console.log(`${array[0]} possède la combinaison suivante : ${array[1]}, ${array[2]},${array[3]},${array[4]}`);
+            console.log(`${array[0]} joue son tour`)
+            array.splice(1, 1);
+            console.log(` La combinaison de ${array[0]} est maintenant la suivante : ${array[1]}, ${array[2]},${array[3]}`)
+        }
+    }, 500)
 }
 
 
@@ -42,9 +53,9 @@ sam.sort(function (a, b) {
 });
 
 
-firstTurn(franck);
-firstTurn(tom);
-firstTurn(sam);
+turn(franck);
+turn(tom);
+turn(sam);
 
 // console.log(`Franck possède la combinaison suivante : ${franck}`);
 // // console.log(`Tom possède la combinaison suivante : ${tom}`);
