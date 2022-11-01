@@ -12,7 +12,11 @@ function getMultipleRandom(array, num) {
 
 function firstTurn(array) {
     if (array[1] == 0) {
-        console.log(` ${array[0]} va jouer en premier`)
+        console.log(`${array[0]} possède la combinaison suivante : ${array[1]}, ${array[2]},${array[3]},${array[4]}`)
+        console.log(` ${array[0]} va jouer en premier`);
+        console.log(`${array[0]} joue la carte ${array[1]}`)
+        array.splice(1, 1);
+        console.log(` La combinaison de ${array[0]} est maintenant la suivante : ${array[1]}, ${array[2]},${array[3]}`)
     }
 }
 
