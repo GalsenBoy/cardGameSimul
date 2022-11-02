@@ -13,7 +13,7 @@ function getMultipleRandom(array, num) {
 
 //Code super méga hyper déguelasse xD mais le clean code va venir lol factoriser et tout ça
 
-function turn(array) {
+function turnZero(array) {
     if (array[1] == 0) {
         console.log(`${array[0]} possède la combinaison suivante : ${array[1]}, ${array[2]},${array[3]},${array[4]}`)
         console.log(` ${array[0]} va jouer en premier`);
@@ -21,14 +21,25 @@ function turn(array) {
         array.splice(1, 1);
         console.log(` La combinaison de ${array[0]} est maintenant la suivante : ${array[1]}, ${array[2]},${array[3]}`)
     }
+    // setTimeout(() => {
+    //     if (array[1] != 0) {
+    //         console.log(`${array[0]} possède la combinaison suivante : ${array[1]}, ${array[2]},${array[3]},${array[4]}`);
+    //         console.log(`${array[0]} joue son tour`)
+    //         array.splice(1, 1);
+    //         console.log(` La combinaison de ${array[0]} est maintenant la suivante : ${array[1]}, ${array[2]},${array[3]}`)
+    //     }
+    // }, 500)
+}
+
+function turnOne(array) {
     setTimeout(() => {
-        if (array[1] != 0) {
+        if (array.length > 4) {
             console.log(`${array[0]} possède la combinaison suivante : ${array[1]}, ${array[2]},${array[3]},${array[4]}`);
             console.log(`${array[0]} joue son tour`)
             array.splice(1, 1);
             console.log(` La combinaison de ${array[0]} est maintenant la suivante : ${array[1]}, ${array[2]},${array[3]}`)
         }
-    }, 500)
+    }, 1)
 }
 
 
@@ -53,9 +64,14 @@ sam.sort(function (a, b) {
 });
 
 
-turn(franck);
-turn(tom);
-turn(sam);
+turnZero(franck);
+turnZero(tom);
+turnZero(sam);
+
+turnOne(franck);
+turnOne(tom);
+turnOne(sam);
+
 
 // console.log(`Franck possède la combinaison suivante : ${franck}`);
 // // console.log(`Tom possède la combinaison suivante : ${tom}`);
