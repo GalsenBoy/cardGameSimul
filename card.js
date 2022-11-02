@@ -41,6 +41,11 @@ function turnOne(array) {
         }
     }, 1)
 }
+function sort(array) {
+    array.sort(function (a, b) {
+        return a - b;
+    });
+}
 
 
 let randomCards = getMultipleRandom(cards, cards.length);
@@ -53,21 +58,16 @@ tom.unshift('Tom');
 sam.unshift('Sam');
 
 //Range les éléments du plus petit au plus grand
-franck.sort(function (a, b) {
-    return a - b;
-});
-tom.sort(function (a, b) {
-    return a - b;
-});
-sam.sort(function (a, b) {
-    return a - b;
-});
+sort(franck);
+sort(tom);
+sort(sam);
 
-
+//Premier joueur
 turnZero(franck);
 turnZero(tom);
 turnZero(sam);
 
+//Premier tour pour les autres
 turnOne(franck);
 turnOne(tom);
 turnOne(sam);
