@@ -17,16 +17,13 @@ function winner(array1, array2, array3) {
 
     if (joueur1 > joueur2 && joueur1 > joueur3) {
         return console.log(`${array1[0]} a gagné la partie`);
-    }
-    if (joueur2 > joueur1 && joueur2 > joueur3) {
+    } else if (joueur2 > joueur1 && joueur2 > joueur3) {
         return console.log(`${array2[0]} a gagné la partie`);
     }
-    if (joueur3 > joueur1 && joueur3 > joueur2) {
+    else {
         return console.log(`${array3[0]} a gagné la partie`);
     }
-
 }
-//Code super méga hyper déguelasse xD mais le clean code va venir lol factoriser et tout ça
 
 function turnZero(array) {
     if (array[1] == 0) {
@@ -36,14 +33,6 @@ function turnZero(array) {
         array.splice(1, 1);
         console.log(` La combinaison de ${array[0]} est maintenant la suivante : ${array[1]}, ${array[2]},${array[3]}`)
     }
-    // setTimeout(() => {
-    //     if (array[1] != 0) {
-    //         console.log(`${array[0]} possède la combinaison suivante : ${array[1]}, ${array[2]},${array[3]},${array[4]}`);
-    //         console.log(`${array[0]} joue son tour`)
-    //         array.splice(1, 1);
-    //         console.log(` La combinaison de ${array[0]} est maintenant la suivante : ${array[1]}, ${array[2]},${array[3]}`)
-    //     }
-    // }, 500)
 }
 
 function turnOne(array) {
