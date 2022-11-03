@@ -76,7 +76,43 @@ sort(sam);
 // turnOne(tom);
 // turnOne(sam);
 
-winner(franck, tom, sam);
+// winner(franck, tom, sam);
+
+
+function sort(array) {
+    array.sort(function (a, b) {
+        return a - b;
+    })
+}
+
+let tab = [-5, 0, 1, -2, -8, 4, 5];
+sort(tab);
+
+// console.log(tab)
+// const posIndex = -1;
+// for (let index = 0; index < tab.length; index++) {
+//     if (tab[index] >= 0) {
+//         const posIndex = tab[index];
+//         console.log(posIndex);
+//         break;
+//     }
+// }
+
+function nombreNegatifPetit(array) {
+    let test = 0
+    for (let index = 0; index < array.length; index++) {
+        if (array[index] < 0) {
+            test = array[index];
+
+        }
+    }
+    console.log(test)
+}
+
+let tab2 = [3, -12, -5, -137]
+sort(tab2);
+nombreNegatifPetit(tab2);
+
 
 
 
