@@ -10,7 +10,22 @@ function getMultipleRandom(array, num) {
     return randomTab.slice(0, num);
 }
 
+function winner(array1, array2, array3) {
+    let joueur1 = array1[array1.length - 1] + array1[array1.length - 2];
+    let joueur2 = array2[array2.length - 1] + array2[array2.length - 2];
+    let joueur3 = array3[array3.length - 1] + array3[array3.length - 2];
 
+    if (joueur1 > joueur2 && joueur1 > joueur3) {
+        return console.log(`${array1[0]} a gagné la partie`);
+    }
+    if (joueur2 > joueur1 && joueur2 > joueur3) {
+        return console.log(`${array2[0]} a gagné la partie`);
+    }
+    if (joueur3 > joueur1 && joueur3 > joueur2) {
+        return console.log(`${array3[0]} a gagné la partie`);
+    }
+
+}
 //Code super méga hyper déguelasse xD mais le clean code va venir lol factoriser et tout ça
 
 function turnZero(array) {
@@ -62,15 +77,25 @@ sort(franck);
 sort(tom);
 sort(sam);
 
-//Premier joueur
-turnZero(franck);
-turnZero(tom);
-turnZero(sam);
+// //Premier joueur
+// turnZero(franck);
+// turnZero(tom);
+// turnZero(sam);
 
-//Premier tour pour les autres
-turnOne(franck);
-turnOne(tom);
-turnOne(sam);
+// //Premier tour pour les autres
+// turnOne(franck);
+// turnOne(tom);
+// turnOne(sam);
+
+winner(franck, tom, sam);
+
+
+
+
+
+
+
+
 
 
 // console.log(`Franck possède la combinaison suivante : ${franck}`);
