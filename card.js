@@ -98,20 +98,20 @@ sort(tab);
 //     }
 // }
 
-function nombreNegatifPetit(array) {
-    let test = 0
-    for (let index = 0; index < array.length; index++) {
-        if (array[index] < 0) {
-            test = array[index];
+// function nombreNegatifPetit(array) {
+//     let test = 0
+//     for (let index = 0; index < array.length; index++) {
+//         if (array[index] < 0) {
+//             test = array[index];
 
-        }
-    }
-    console.log(test)
-}
+//         }
+//     }
+//     console.log(test)
+// }
 
-let tab2 = [3, -12, -5, -137]
-sort(tab2);
-nombreNegatifPetit(tab2);
+// let tab2 = [3, -12, -5, -137]
+// sort(tab2);
+// nombreNegatifPetit(tab2);
 
 
 
